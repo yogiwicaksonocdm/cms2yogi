@@ -6,13 +6,32 @@
     <title>Simple CMS Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 font-sans">
-    <div class="max-w-4xl mx-auto p-6">
-        <header class="flex justify-between items-center mb-8 border-b pb-4">
+<body class="bg-[#f6f5ef] font-sans text-[#202b28]">
+    <div class="max-w-6xl mx-auto px-5 py-6 sm:px-8">
+        <header class="flex justify-between items-center mb-8 border-b border-[#d9ddd5] pb-4">
             <h1 class="text-2xl font-bold text-gray-800">Simple CMS Dashboard</h1>
-            <a href="/edit.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">+ Tambah Konten</a>
+            <a href="/edit.html" class="bg-[#315b4c] text-white px-4 py-2 rounded-md hover:bg-[#244638] transition">+ Tambah Konten</a>
         </header>
 
+        <section class="grid grid-cols-[minmax(0,1fr)_minmax(96px,0.42fr)] items-center gap-3 overflow-hidden rounded-md bg-[#e7ede5] sm:gap-6 md:grid-cols-[1fr_1.05fr] md:gap-10" aria-labelledby="hero-title">
+            <div class="py-7 pl-5 pr-1 sm:px-8 md:py-12 lg:px-14">
+                <p class="mb-4 text-xs font-bold uppercase text-[#557263]">Ruang publikasi · CMS</p>
+                <h2 id="hero-title" class="max-w-xl font-serif text-3xl leading-tight text-[#20372f] sm:text-4xl md:text-5xl">Cerita baik layak mendapat ruang.</h2>
+                <p class="mt-4 max-w-md text-sm leading-6 text-[#56645d] sm:text-base sm:leading-7">Kelola kabar, gagasan, dan pembaruan terbaru dalam satu tempat.</p>
+                <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3 sm:mt-7">
+                    <a href="/edit.html" class="rounded-md bg-[#315b4c] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#244638]">Tulis konten <span aria-hidden="true">↗</span></a>
+                    <a href="#post-list" class="text-sm font-semibold text-[#315b4c] underline decoration-[#9eafa3] underline-offset-4 hover:text-[#20372f]">Jelajahi konten</a>
+                </div>
+            </div>
+            <img class="h-full min-h-[320px] w-full object-cover md:min-h-[390px]" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85" alt="Ruang kerja terang dengan meja dan tanaman" fetchpriority="high">
+        </section>
+
+        <div class="mb-5 mt-10 flex items-end justify-between gap-4">
+            <div>
+                <p class="text-xs font-bold uppercase text-[#718078]">Terbaru</p>
+                <h2 class="mt-1 font-serif text-2xl text-[#20372f]">Konten pilihan</h2>
+            </div>
+        </div>
         <div id="loading" class="text-center py-10 text-gray-500">Memuat data...</div>
         
         <div id="post-list" class="grid gap-4"></div>
